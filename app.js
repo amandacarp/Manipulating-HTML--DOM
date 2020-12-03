@@ -1,6 +1,7 @@
 //1a. make a button appear on the page
 let button = document.createElement("button");
 let btnText = document.createTextNode("BUTTON TO ALERT MESSAGE");
+button.classList='btn btn-success m-2';
 button.appendChild(btnText);
 document.body.appendChild(button);
 
@@ -12,7 +13,9 @@ button.addEventListener("click", function(){
 
 //2. When the second button is clicked, alert the content on the input field
 let message = document.getElementById("inputText");
-document.getElementById("btn").addEventListener("click", function() {
+let alertButton = document.getElementById("btn")
+alertButton.classList='btn btn-success m-2';
+alertButton.addEventListener("click", function() {
     alert( message.value );
 });
 
@@ -25,7 +28,7 @@ test.addEventListener("mouseenter", function(e){
 //3b. div return to original color
 let testOut = document.getElementById("divHover");
 testOut.addEventListener("mouseleave", function(e){
-    e.target.style.backgroundColor = "white";
+    e.target.style.backgroundColor = "";
 })
 
 //4. click p - color of text changes to random color
@@ -45,6 +48,7 @@ textPara.style.color = randomColor;
 //5a.add a button and an empty div
 let buttonTwo = document.createElement("button");
 let btnTextTwo = document.createTextNode("BUTTON TO WRITE MY NAME");
+buttonTwo.classList='btn btn-success m-2';
 buttonTwo.id = "btnClick"
 buttonTwo.appendChild(btnTextTwo);
 document.body.appendChild(buttonTwo);
@@ -54,6 +58,7 @@ document.body.appendChild(emptyDiv);
 
 //5b. when the button is clicked, add a span that contains your name to empty div
 let buttonThree = document.getElementById("btnClick");
+buttonThree.classList='btn btn-success m-2';
 buttonThree.addEventListener("click", function(){
     let span = document.createElement("span");
     let spanText = document.createTextNode("Amanda");
@@ -66,6 +71,7 @@ let friends = ["Alex", "Alexandra", "Roger", "Adam", "Carolyn", "Matt", "Kim", "
 
 //6b. When button is clicked add each friend as an li in ul
 let clickButton = document.getElementById("anotherButton");
+clickButton.classList='btn btn-success m-2';
 clickButton.addEventListener("click", function(){
 
 
